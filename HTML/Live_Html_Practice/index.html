@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Content</title>
+    <!-- Add Favicon Image -->
+    <link rel="shortcut icon" href="./favicon.jpg" type="image/x-icon">
+
+    <!-- Add Description -->
+     <meta name="description" content="This is containing some basic content about html.">
+
+
+
+
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <!-- List -->
+    <ol reversed>
+        <li>Apple</li>
+        <li>banana</li>
+        <li>Papaya</li>
+    </ol>
+
+    <ul style="list-style: armenian;">
+        <li>Apple</li>
+        <li>banana</li>
+        <li>Papaya</li>
+    </ul>
+
+    <!-- description List -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, dolorum?</dd>
+    </dl>
+
+    <!-- Hyperlinks -->
+     <!-- call -->
+     <a href="tel:123456789">Call Me</a>
+     <br>
+
+     <!-- mail -->
+     <a href="mailto:abc@example.com">Email Me</a> <br>
+
+     <!-- download -->
+     <a href="./img.png" download="hero.jpg">Download Now</a> <br>
+
+     <!-- Open in new page -->
+     <a href="http://www.google.com" target="_blank">Google</a> <br> <br>
+
+    <!-- Details tag -->
+
+    <details>
+        <summary>Click Here</summary>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime itaque ad, 
+            optio ab nihil beatae quia veritatis obcaecati ipsam quisquam! Suscipit qui 
+            atque repellendus ratione nostrum vero delectus porro maiores.</p>
+    </details>
+    <br>
+
+    <!-- Select -->
+     <select name="Lorem" id="">
+        <option value="">Lorem</option>
+        <option value="">Lorem1</option>
+        <option value="">Lorem2</option>
+     </select>
+    <br> <br>
+
+    <!-- Img Tag -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="alternative image" height="100"> <br> <br>
+
+
+    <!-- video Tag -->
+     <video autoplay loop muted height="100" src="./video.mp4" controls></video> <br> <br>
+
+    <!-- Audio tag -->
+     <audio src="./audio.mp3" controls></audio> <br> <hr>
+
+    <!-- Table -->
+     <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Shubham</td>
+            <td>Male</td>
+            <td>kanpur</td>
+        </tr>
+         <tr>
+            <td>Akash</td>
+            <td>Male</td>
+            <td>jaipur</td>
+        </tr>
+     </table>
+     <br> <hr>
+
+    <!-- Forms -->
+     <form>
+        <!-- Input Tag -->
+        <input required type="text" placeholder="Enter Name....">
+        <input type="password" placeholder="Enter Password...">
+        <input type="email" placeholder="Enter Email..."> <br> <br>
+
+        <!-- Checkbox ( match id from label id, so that click on label will effect checkbox) -->
+        <input type="checkbox" id="check"> <br>
+        <label for="check">I accept terms and condition...</label> <br> <br>
+
+        <!-- radio ( same name should be so that at a one time one should choose) -->
+         <input type="radio" name="gen" >Male <br>
+         <input type="radio" name="gen" >Female <br> <br>
+
+        <!-- File Choosen -->
+        <input type="file" name="" id=""> <br> <br>
+
+
+        <!-- Button -->
+        <button>Submit</button>
+     </form>
+
+    
+
+
+
+    
+
+    <!--  Can Play audio using javascript, without controls -->
+    <script>
+        var audio = document.querySelector('audio')
+        document.querySelector('h1').addEventListener('click', function() {
+            audio.play()
+        })
+    </script>
+
+    
+     
+</body>
+</html>

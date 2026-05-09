@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Web Page</title>
+  </head>
+  <body>
+    <!-- HTML START -->
+    <p>
+      <strong>Lorem</strong> ipsum, dolor sit amet
+      <em>consectetur</em> adipisicing elit. <small>Voluptates</small> repellat
+      in amet voluptatem facilis <mark>corporis</mark> nobis delectus
+      <del>accusamus</del> corrupti maiores! Excepturi rerum repellendus culpa
+      ipsum?
+    </p>
+
+    <p>
+      h <sub> <small>2</small> </sub> o
+    </p>
+
+    <p>x<sup>2</sup></p>
+
+    <a href="https://www.google.com">Go To Google</a>
+    <br />
+
+    <a href="tel:+911234567891">1234567891</a>
+
+    <hr />
+
+    <img
+      src="https://unsplash.com/photos/whale-tail-emerging-from-blue-ocean-water-with-mountains-wrHqGd3WMgc"
+      alt="Image Here"
+    />
+    <br />
+
+    <audio src="path of audio file" controls></audio>
+
+    <video src="" autoplay muted loop></video> <br />
+
+    <iframe
+      src="https://www.youtube.com/embed?v=k2PLDtpRkwQ&t=3s"
+      title="YouTube video player"
+      frameborder="0"
+    ></iframe>
+
+    <br />
+
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+
+    <ul>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <br />
+
+    <!-- TABLES_HTML -->
+
+    <table border="2">
+      <caption>
+        Order Summary
+      </caption>
+
+      <colgroup>
+        <col style="background-color: lightcoral" />
+        <col style="background-color: lightgreen" />
+        <col style="background-color: lightblue" />
+      </colgroup>
+
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Meggi</td>
+          <td>30</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>Lays</td>
+          <td>10</td>
+          <td>500</td>
+        </tr>
+        <tr>
+          <td>Kurkure</td>
+          <td>70</td>
+          <td>50</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="2">Total Price</th>
+          <th>850</th>
+        </tr>
+      </tfoot>
+    </table>
+    <br />
+    <br />
+
+    <!---------- FORMS_HTML ------------>
+
+    <!-- Basic Understanding Of Forms Tag  -->
+
+    <form action="">
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="name"> Name </label>
+        <input type="text" placeholder="Enter Your name" id="name" />
+
+        <label for="email"> Email </label>
+        <input type="text" placeholder="Enter Your email" id="email" />  
+
+        <label for="age"> Age </label>
+        <input type="text" placeholder="Enter Your age" id="age" />
+      </fieldset>
+
+      <br />
+      <br />
+
+      <input type="text" placeholder="Enter Your name" />
+      <br />
+      <br />
+
+      <label for="course">Select Courses....</label>
+      <select name="" id="course">
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JS</option>
+      </select>
+
+      <label for="course">Select Courses....</label>
+      <select>
+        <optgroup label="Frontend">
+          <option value="">HTML</option>
+          <option value="">CSS</option>
+          <option value="">JS</option>
+        </optgroup>
+        <optgroup label="Backend">
+          <option value="">Node JS</option>
+          <option value="">Express JS</option>
+          <option value="">MongoDB</option>
+        </optgroup>
+      </select>
+      <br />
+      <br />
+
+      <label for="reviews">Reviews....</label>
+      <textarea id="reviews" cols="15" rows="3"></textarea>
+      <br />
+      <br />
+
+      <input type="checkbox" name="" id="">
+      <input type="range" max="100" value="30" name="" id="">
+
+      <button>Submit</button>
+    </form>
+    <br />
+    <br />
+
+
+    <!-- Student Registration Form -->
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Name</label> <br />
+            <input id="name" type="text" placeholder="name" /> <br /> <br />
+            
+            <label for="email">Email</label> <br />
+            <input id="email" type="text" placeholder="email" /> <br /> <br />
+            
+            <label for="mobile">Mobile</label> <br />
+            <input id="mobile" type="text" placeholder="mobile" /> <br />
+        </fieldset>
+
+        <br />
+        <br />
+
+        <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="addressline1">Address Line 1</label>
+            <textarea id="addressline1" rows="3"></textarea> <br /> <br />
+
+            <label for="city">City</label>
+            <select id="city">
+                <option >Bhopal</option>
+                <option >Indore</option>
+                <option >Gwalior</option>
+                <option >Mumbai</option>
+                <option >Delhi</option>
+            </select>
+            <br /> <br />
+
+            <label for="country">Country</label>
+            <select id="country">
+                <option >India</option>
+                <option >USA</option>
+                <option >UK</option>
+                <option >UAElabel>
+            </select>    
+        </fieldset>
+
+        <br />
+        <br />
+
+        <label for="courses">Select Courses:</label>
+        <select id="courses">
+            <optgroup label="Frontend">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>JS</option>
+            </optgroup>
+            <optgroup label="Backend">
+                <option>Node JS</option>
+                <option>Express JS</option>
+                <option>MongoDB
+            </optgroup>
+        </select>
+
+        <br />
+        <br />
+
+        <button>Submit Form</button>
+    </form>
+
+    <br />
+    <br />
+
+    <details>
+        <summary>Open Me</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nostrum ad perferendis 
+            facere ducimus omnis magni tenetur accusantium? Quia, cupiditate.</p>
+    </details>
+
+    <h1 contenteditable="true">Hello Guys....</h1>
+
+    <h1 draggable="true">Hello</h1>
+
+    <!-- SEMANTIC TAGS HTML -->
+
+    <header>
+    </header>
+
+    <main>
+        <section></section>
+        <aside></aside>
+        <article></article>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
+</html>
