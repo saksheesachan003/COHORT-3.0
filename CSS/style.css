@@ -1,0 +1,335 @@
+/* Boilerplate to reset HTMl default css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* CSS Basics - Understanding Core Concepts */
+
+.h1 {
+  color: brown;
+}
+
+/* div {
+  background-color: lightgreen;
+  height: 15%;
+} */
+
+.heading {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.sub-heading {
+  font-size: 25px;
+  color: grey;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.para {
+  text-decoration: overline;
+  font-size: 15px;
+  line-height: 20px;
+  word-spacing: 3px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.box {
+  height: 40%;
+  width: 40%;
+  background-color: lightsalmon;
+  border: 2px solid red;
+  margin-left: 20px;
+  padding: 10px;
+  background-image: url("https://images.unsplash.com/photo-1776518411187-de29b9b1bcc1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* CSS layout Basics */
+
+/* making block element to inline */
+.inline {
+  display: inline;
+}
+
+/* Making inline element to block */
+span {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  height: 40%;
+  width: 100%;
+  background-color: lightgray;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.box1 {
+  height: 90%;
+  width: 20%;
+  background-color: rgb(11, 174, 228);
+}
+
+#diff1 {
+  background-color: red;
+}
+
+#diff2 {
+  background-color: green;
+}
+
+#diff3 {
+  background-color: blue;
+}
+
+/* CSS Grid Layout */
+
+.container1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 90%;
+  width: 100%;
+  background-color: rgb(104, 65, 65);
+}
+
+.box2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkorange;
+}
+
+/* CSS Positioning */
+
+/* Takes absolute on body */
+
+.container2{
+    position: relative;
+    height: 20%;
+    width: 50%;
+    background-color: aquamarine;
+}
+
+/* .diff{
+    position: absolute; 
+    background-color: red;
+    left: 20%;
+}
+
+.differ{
+    /* position: relative; */
+     /* background-color: green;  */
+    /* left: 5%;  
+} 
+*/
+
+/*  Takes absolute in relative parent container */
+.diff{
+  position: absolute;
+  background-color: red;
+  margin-bottom: 10px;
+  height: 20%;  
+  width: 50%;
+  top: 10px;
+}
+
+.differ{
+    height: 20%;
+    background-color: green;
+}
+
+.container3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 20%;
+    width: 50%;
+    background-color: yellowgreen;
+}
+
+.dif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: violet;
+    height: 50%;
+    width: 50%;
+}
+
+.dif1{
+    position: absolute;
+    left: 70%;
+    height: 50%;
+    width: 50%;
+    background-color: yellow;
+}
+
+/* CSS Pseudo Classes And Elements */
+
+.container4{
+    height: 60%;
+    width: 30%;
+    background-color: tomato;
+}
+
+.box3{
+    height: 20%;
+    margin-bottom: 10px;
+}
+
+.box3:first-child{
+    background-color: darkslateblue;
+}
+
+.box3:nth-child(2){
+    background-color: lawngreen;
+}
+
+.box3:nth-child(3){
+    background-color: darkolivegreen;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.box3:nth-child(4){
+    background-color: deeppink;
+}
+
+button{
+    font-size: 30px;
+}
+
+button:hover{
+    background-color: red;
+    color: white;
+}
+
+input:focus{
+   border: 3px solid green;
+}
+
+/* CSS Transitions */
+
+button{
+  /* transition: property duration timing-function-delay delay; */
+  transition: all 0.5s ease-in-out 1s;
+}
+
+/* CSS Transform */
+
+#trnsfrms{
+  transform: scale(0.5);
+}
+
+#trnsfrms:hover{
+  transform: scale(1.5);
+  transform: rotate(45deg);
+}
+
+.box3:nth-child(4){
+  transform: translate(100px, 20px);
+}
+
+/* Techniques for center an elemnent  */
+
+.parent{
+  /*  1st way to center...... 
+  
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+  */
+
+  position: relative;
+
+  height: 50%;
+  width: 50%;
+  background-color: lightblue
+}
+
+.child{
+  /* 2nd way to center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  height: 80%;
+  background-color: lightgreen;
+}
+
+/* CSS Animations */
+
+.parent1{
+  height: 50%;
+  width: 50%;
+  background-color: rgb(230, 173, 210);
+}
+
+.child1{
+  height: 20%;
+  width: 10%;
+  background-color: gold;
+  animation: moveBox 1s ;
+}
+
+/* @keyframes moveBox {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translate(500px);
+  }
+} */
+
+@keyframes moveBox{
+  0%{
+    transform: translate(0px);
+  }
+  50%{
+    transform: translate(500px);
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: translate(700px);
+  }
+}
+
