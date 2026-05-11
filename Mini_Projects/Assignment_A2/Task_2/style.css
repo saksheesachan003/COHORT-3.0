@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid #F38D40; */
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid #F38D40; */
+}
+
+nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-ctnr {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #40403f;
+}
+
+.heading-ctnr strong {
+  color: #f38d40;
+  font-size: 2rem;
+}
+
+.navbar-ctnr {
+  width: 60%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.navbar-content {
+  color: #5b5a58;
+  font-size: 1.3rem;
+}
+
+.logo-ctnr {
+  width: 25%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4rem;
+  margin-right: 2rem;
+}
+
+.logo-ctnr i {
+  color: #7b7975;
+  font-size: 1.3rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.sub-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-left: 2rem;
+}
+
+.new-heading {
+  color: #f38d40;
+  font-size: 1rem;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+.new-sub-heading {
+  display: flex;
+  align-items: flex-end;
+  font-size: 2.3rem;
+  font-weight: 800;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #1e1e1d;
+}
+
+.double-line {
+  display: flex;
+  gap: 4px;
+  margin-top: -5px;
+}
+
+.double-line span {
+  width: 5px;
+  height: 30px;
+  background: #f38d40;
+  display: inline-block;
+}
+
+.dollar-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.sub-content,
+.sub-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc-ctnr {
+  width: auto;
+  height: auto;
+}
+
+.desc-ctnr h5 {
+  font-size: 1rem;
+  color: #454540;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.desc-ctnr p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.read-ctnr {
+  display: flex;
+  flex-direction: row;
+  gap: 17px;
+  font-size: 0.7rem;
+  color: black;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.read-ctnr i {
+  color: #f38d40;
+}
+
+.toggle-ctnr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+  font-size: 0.7rem;
+  color: black;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+}
+
+.material-div,
+.shipping-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.material-div h6,
+.shipping-div h6 {
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.fa-solid {
+  font-size: 1rem;
+}
+
+.img-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-container img {
+  filter: drop-shadow(4px 9px 10px rgba(7, 7, 7, 0.4));
+  width: 150%;
+}
+
+.sub-ctnr {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.size-heading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.btn-ctnr {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn-ctnr button {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #91918b;
+  border: 3px solid #e6721a;
+}
+
+.btn-ctnr button:hover {
+  background-color: #343433;
+  color: wheat;
+}
+
+.medium {
+  background-color: #e6721a !important;
+  border: 3px solid #2d2c2b !important;
+}
+
+.size-guide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.size-guide h6 {
+  font-size: 1rem;
+  color: rgb(42, 39, 39);
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.size-guide i {
+  color: #e6721a;
+}
+
+.img-ctnr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-ctnr,
+.second-ctnr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.first-img,
+.second-img,
+.third-img,
+.fourth-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.second-img,
+.fourth-img {
+  margin-left: 2rem;
+}
+
+.sub-img {
+  height: 100px;
+  padding: 3px;
+}
+
+.highlight {
+  border: 2px solid #e75a01;
+  border-radius: 15px;
+}
+
+.add-to-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  border: 2px solid #111110;
+}
+
+.add-to-wishlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 10px;
+  background-color: #e75a01;
+  color: white;
+}
+
+.card-container {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.img {
+  width: 150px;
+  height: 200px;
+}
