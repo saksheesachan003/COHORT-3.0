@@ -19,22 +19,42 @@ main {
   height: 100%;
   background-color: black;
   display: grid;
-  grid-template-rows: 10% 60% 30%;
-  grid-template-columns: 25% 25% 50%;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-rows: 10% calc(100% - 40% - 20px) 30%;
+  grid-template-columns: 25% 25% calc(100% - 50% - 20px);
+  grid-template-areas:
+    "header header header"
+    "left-center left-center right"
+    "left-bottom1 left-bottom2 right";
 }
 
-.header{
-    background-color: royalblue;
+.header {
+  background-color: royalblue;
+  grid-area: header;
+  border-radius: 10px;
 }
 
-.left-center{
-    background-color: cadetblue;
+.left-center {
+  background-color: cadetblue;
+  grid-area: left-center;
+  border-radius: 10px;
 }
 
-.left-bottom1{
-    background-color: darkcyan;
+.left-bottom1 {
+  background-color: darkcyan;
+  grid-area: left-bottom1;
+  border-radius: 10px;
 }
 
-.left-bottom2{
-    background-color: lightcoral;
+.left-bottom2 {
+  background-color: lightcoral;
+  grid-area: left-bottom2;
+  border-radius: 10px;
+}
+
+.right {
+  background-color: rgb(177, 49, 177);
+  grid-area: right;
+  border-radius: 10px;
 }
