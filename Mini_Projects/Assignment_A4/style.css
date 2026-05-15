@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  column-gap: 1px;
+  background-color: #151416;
+  row-gap: 1px;
+  grid-template-columns: 22% 20% calc(100% - 91% -1px) 27% 22%;
+  grid-template-rows: 29% 26% calc(100% - 93% -1px) 18% 20%;
+  grid-template-areas:
+    "left-top top-center1 top-center1 top-center2 right-top"
+    "left-top center center center right-top"
+    "left-bottom center center center right-top"
+    "left-bottom center center center right-bottom"
+    "left-bottom bottom-center1 bottom-center2 bottom-center2 right-bottom";
+}
+
+.left-top {
+  background-color: #FCE5E6;
+  grid-area: left-top;
+  border-radius: 20px;
+}
+
+.left-bottom {
+  background-color: #1E1E1E;
+  grid-area: left-bottom;
+  border-radius: 20px;
+}
+
+.top-center1 {
+  background-color: #FCF8F7;
+  grid-area: top-center1;
+  border-radius: 20px;
+}
+
+.top-center2 {
+  background-color: #FBF6F8;
+  grid-area: top-center2;
+  border-radius: 20px;
+}
+
+.center {
+  background-color: #FBE4E5;
+  grid-area: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.right-top {
+  background-color: #FBF7F8;
+  grid-area: right-top;
+  border-radius: 20px;
+}
+
+.right-bottom {
+  background-color: #FCF8F7;
+  grid-area: right-bottom;
+  border-radius: 20px;
+}
+
+.bottom-center1 {
+  background-color: #FCF8F9;
+  grid-area: bottom-center1;
+  border-radius: 20px;
+}
+
+.bottom-center2 {
+  background-color: #FEF2F2;
+  grid-area: bottom-center2;
+  border-radius: 20px;
+}
+
+.center-circle{
+    border-radius: 50%;
+    background: radial-gradient(#FED3D7, #e7bec2);
+    width: 50%;
+    height: 100%;
+
+    /* margin: auto; */
+}
+
+.img-div{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+}
+
+.chart-div{
+    position: absolute;
+    left: 10px;  
+    top: 10px; 
+    width: 200px;
+    height: 200px;
+}
