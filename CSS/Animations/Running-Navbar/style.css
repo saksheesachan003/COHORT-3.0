@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.parent {
+  background-color: rgb(141, 47, 47);
+  display: flex;
+}
+
+h4 {
+  background-color: rgb(49, 49, 172);
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+
+  animation-name: mark;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* 
+
+translateX(0) -> show as it is
+
+translateX(-50%) -> shows half element
+
+translateX(-100%) -> hides element ( goes under screen)
+
+*/
+
+@keyframes mark {
+  /*  move right to left ..... 
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+     */
+
+  /* move left to right ...... */
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
