@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    height: 200px;
+    position: absolute;
+    animation-name: dora;
+    animation-duration: 3s;
+    animation-delay: 1s;
+
+    /* animation will stop in final position not in initial position (bacwards -> default value) */
+    animation-fill-mode: forwards;  
+
+    /* animation will run infinite time not one time (default -> 1 ) */
+    animation-iteration-count: infinite;
+
+    /* controls whether should animation run (default -> normal ) */
+        /* normal -> initial to final, reverse -> final to initial , alternate -> one time normal, one time reverse  */
+    animation-direction: alternate;
+
+    /* how to perform animation, slow , speed jow is it */
+        /* linear -> constant speend through out journey */
+        /* ease-in -> starting slow, ending fast */
+        /* ease-out -> starting fast, ending slow */ 
+        /* ease-in-out -> starting and ending both slow and in middle fast  */
+    animation-timing-function: ease-in-out;
+}
+
+/* on Mouse hover, imag will be stop */
+img:hover{
+
+    /* changes the state of element , paused, default -> running */
+    animation-play-state: paused;
+}
+
+@keyframes dora {
+    from{
+        left: 0;
+        rotate: 0;
+    }to{
+        left: 75%;
+        rotate: 360deg;
+    }
+}
