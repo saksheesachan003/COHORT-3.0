@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------ Underline Animation ------------------------ */
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: royalblue;
+    gap: 20px;
+}
+
+h4{
+    font-size: 30px;
+    position: relative;
+    /* border-bottom: 2px solid transparent; */
+}
+
+/* 1st Method -> directly on hover and first defime border-bootom transparent */
+
+/* h4:hover{
+    border-bottom: 2px solid white;
+} */
+
+
+
+h4::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: all ease 0.3s;
+    transform: translateX(-50%);  
+}
+
+/* 2nd Method -> h4 element pr hover karne par uske after element par effect  */
+
+h4:hover::after{
+    width: 100%;
+}
