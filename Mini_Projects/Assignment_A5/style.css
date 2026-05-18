@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+/* Navbar CSS */
+
+nav {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.links img {
+  width: 200px;
+  height: 100px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #000000;
+}
+
+.btn-link {
+  display: flex;
+  gap: 30px;
+}
+
+.sign-up,
+.log-in {
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  border: none;
+  line-height: 20px;
+}
+
+.sign-up {
+  background-color: white;
+  color: black;
+}
+
+.log-in {
+  background-color: black;
+  color: white;
+}
+
+/* Section 1 CSS */
+
+.section1 {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 15px;
+  gap: 20px;
+}
+
+.section1 h1 {
+  font-size: 71px;
+  font-weight: 400;
+  line-height: 88px;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.section1 h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000000;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.search-div {
+  width: 45%;
+  height: 9%;
+  background-color: #dbd9d9;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  gap: 15px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.search-div input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: #dbd9d9;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 10px;
+}
+
+.search-div input:focus {
+  outline: none;
+  border: none;
+}
+
+.search-div .icon {
+  width: calc(100% - 80%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon h5 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.ri-search-ai-line {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  width: 40px;
+  height: 40px;
+  background-color: palevioletred;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-div:hover, .search-div input:hover{
+    background-color: white;
+}
