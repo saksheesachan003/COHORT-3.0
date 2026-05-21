@@ -75,3 +75,68 @@ switch (true) {
   default:
     console.log("Fail");
 }
+
+// <------------------- Loops ---------------------->
+
+// -- While LOOP ( when condition is true, only then run o/w won't run) ---------
+var a = 10;
+
+// Decrement ( 10 to 1 )
+while (a > 0) {
+  console.log(a);
+  a--; // 10 to 1
+}
+
+// Increment ( 0 to 9)
+var b = 0;
+while (b < 10) {
+  console.log(b);
+  b++; // 0 to 9
+}
+
+// Print even number ( odd -> !== )
+
+var num = Number(prompt("Enter Your Number...."));
+var a = 0;
+while (a <= num) {
+  if (a % 2 === 0) {
+    console.log(a);
+  }
+  a++;
+}
+
+// Ask a user any number and prints its table
+
+// var num = Number(prompt("Enter Your Number...."));
+var a = 1;
+while (a <= 10) {
+  console.log(a * num);
+  a++;
+}
+
+// -------------- do-while loop ( atleast one time loop run , and then check condition) -------------
+
+var a = 11;
+do {
+  console.log(a);
+  a++;
+} while (a < 10);
+
+// ask for password, and if password is correct then run o/w repeat
+do {
+  var paswd = prompt("Enter Password");
+} while (paswd !== "123");
+console.log("Welcome");
+
+// -------------- for-loop ( alernative of while, all things in one, variable, condition and increment) ------
+
+for (var a = 1; a <= 5; a++) {
+  console.log(a); // 0 to 5
+}
+
+for (var a = 1; a <= 10; a++) {
+  if (a % 2 != 0) {
+    continue;
+  }
+  console.log(a);
+}
