@@ -17,6 +17,10 @@ console.table([10, 20, 30, 40, 50]);
 
 // <------------------------------------ Variables --------------------------------------> ///////////////////////////////////
 
+console.log(
+  "------------------------------  Variables Question ------------------------------------- ",
+);
+
 // Ques 1 :) Create a variable called studentName and store your name in it.
 var studentName = "Sakshee Sachan";
 
@@ -53,6 +57,10 @@ console.log(`Full Name: ${fullName}`);
 
 // <------------------------------------ Data Types --------------------------------------> ///////////////////////////////////
 
+console.log(
+  "------------------------------  Dtaa Types Question ------------------------------------- ",
+);
+
 // Ques 1 :) Create variables of type string, number, boolean, null, and undefined.
 var str = "Ritika";
 var num = 43;
@@ -79,6 +87,10 @@ console.log(`BigInt: ${bigInt}, typeof: ${typeof bigInt}`);
 
 // <------------------------------------ Type Conversion & Coercion --------------------------------------> ///////////////////////////////////
 
+console.log(
+  "------------------------------  Type Conversion Question ------------------------------------- ",
+);
+
 // Ques 1 :) Convert the string "50" into a number.
 console.log(Number("50"));
 
@@ -103,6 +115,10 @@ console.log(Number("123abc")); // NaN
 console.log(parseInt("500px")); // 500
 
 // <------------------------------------ Operators --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------  Operators Question ------------------------------------- ",
+);
 
 // Ques 1 :) Add two numbers and print the result.
 console.log(10 + 20);
@@ -149,6 +165,10 @@ console.log(!a); // false
 
 // <------------------------------------ Truthy & Falsy --------------------------------------> ///////////////////////////////////
 
+console.log(
+  "------------------------------  Truthy and Falsy Question ------------------------------------- ",
+);
+
 // Ques 1 :) Check whether an empty string is truthy or falsy.
 console.log(Boolean("")); // falsy
 
@@ -168,6 +188,10 @@ if (x) {
 
 // <------------------------------------ Ternary Operator --------------------------------------> ///////////////////////////////////
 
+console.log(
+  "------------------------------  Ternary Operator Question ------------------------------------- ",
+);
+
 // Ques 1 :) Check whether a number is even or odd using ternary operator.
 var num = 10;
 var rst = num % 2 === 0 ? "Even" : "Odd";
@@ -185,6 +209,10 @@ var grater = a > b ? a : b;
 console.log("Grater Number :", grater);
 
 // <------------------------------------ Conditionals --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------  Conditionals Question ------------------------------------- ",
+);
 
 // Ques 1 :) Check whether a number is positive or negative.
 var num = -10;
@@ -349,4 +377,273 @@ if (username === "admin" && password === "1234") {
 
 // <------------------------------------ Strings --------------------------------------> //////////////////////////////////////
 
+console.log(
+  "------------------------------  Strings Question ------------------------------------- ",
+);
+
+// Ques 1 :) Create a string and print its length.
+var str = "Hello JavaScript";
+console.log(str.length);
+
+// Ques 2 :) Convert a string into uppercase.
+console.log(str.toUpperCase());
+
+// Ques 3 :) Convert a string into lowercase
+console.log(str.toLowerCase());
+
+// Ques 4 :) Check if a string includes the word "JavaScript".
+console.log(str.includes("JavaScript"));
+
+// Ques 5 :) Extract the word "World" from "Hello World".
+var wrd = "Hello World";
+console.log(wrd.slice(6));
+
+// Ques 6 :) Replace "apple" with "mango" in a sentence.
+var sent = "I like apple";
+console.log(sent.replace("apple", "mango"));
+
+// Ques 7 :) Split "HTML,CSS,JS" into an array.
+var lang = "HTML,CSS,JS";
+console.log(lang.split(","));
+
+// Ques 8 :) Remove extra spaces from a string.
+var wrd = " hi ";
+console.log(wrd.trim());
+
+// Ques 9 :) Repeat the word "Hi" 5 times.
+var wrd = "Hi";
+console.log(wrd.repeat(5));
+
+// Ques 10 :) Print the first character of a string.
+console.log(wrd.charAt(0));
+
+// Ques 11 :) Use template literals to print:"My name is Aman and I am 20 years old"
+var name = "Aman";
+var age = 20;
+console.log(`My name is ${name} and I am ${age} years old`);
+
 // <------------------------------------ Numbers & Math --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------  Number & Math Question ------------------------------------- ",
+);
+
+// Ques 1 :) Round 4.7 using Math.round().
+console.log(Math.round(4.7)); // 5
+
+// Ques 2 :) Find the square root of 81.
+console.log(Math.sqrt(81)); // 9
+
+// Ques 3 :) Find the maximum number from 10, 20, 5, 99.
+console.log(Math.max(10, 20, 5, 99)); // 99
+
+// Ques 4 :) Generate a random number between 1 and 10.
+console.log(Math.floor(Math.random() * 10) + 1);
+
+// Ques 5 :) Convert "99.99" into an integer.
+console.log(parseInt("99.99")); // 99
+
+// Ques 6 :) Check whether 25 is an integer or not.
+console.log(Number.isInteger(25)); // true
+
+// Ques 7 :) Use toFixed(2) on 3.141592.
+console.log((3.141592).toFixed(2)); // 3.14
+
+// <------------------------------------ Mixed Practice Questions --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------ Mixed Question ------------------------------------- ",
+);
+
+// Ques 1 :) Create a mini biodata program using variables and template literals.
+var name = "Sakshee Sachan";
+var age = 22;
+var city = "Noida";
+console.log(`My Name is: ${name} and  Age is: ${age} and i am from: ${city}`);
+
+// Ques 2 :) Calculate the area of a rectangle.
+var height = 10;
+var width = 20;
+var area = height * width;
+console.log(`Area of Rectangle is: ${area}`);
+
+// Ques 3 :) Calculate the simple interest.
+var principal = 1000;
+var rate = 5;
+var time = 2;
+var interest = (principal * rate * time) / 100;
+console.log(`Simple Interest is: ${interest}`);
+
+// Ques 4 :) Convert temperature from Celsius to Fahrenheit.
+var celcius = 43;
+var farenhite = (celcius * 9) / 5 + 32;
+console.log(`Farenhite is: ${farenhite}`);
+
+// Ques 5 :) Convert kilometers into meters.
+var kilometers = 10;
+var meters = kilometers * 1000;
+console.log(`Meters is: ${meters}`);
+
+// Ques 6 :) Calculate total marks and percentage of 5 subjects.
+var sub1 = 80;
+var sub2 = 70;
+var sub3 = 60;
+var sub4 = 50;
+var sub5 = 70;
+var total_marks = sub1 + sub2 + sub3 + sub4 + sub5;
+var percentage = (total_marks / 500) * 100;
+console.log(`Total Marks is: ${total_marks} and Percentage is: ${percentage}`);
+
+// Ques 7 :) Calculate electricity bill based on units consumed.
+// First 100 units          → ₹5 per unit
+// between 101 - 200 units       → ₹7 per unit
+// Above 200 units          → ₹10 per unit
+
+var units = 150;
+if (units <= 100) {
+  var bill = units * 5;
+} else if (units > 100 && units <= 200) {
+  var bill = 100 * 5 + (units - 100) * 7;
+} else {
+  var bill = 100 * 5 + 100 * 7 + (units - 200) * 10;
+}
+console.log(`Electricity Bill is: ${bill}`);
+
+// Ques 8 :) Create a username generator using first name and birth year.
+var firstName = "user";
+var birthYear = 1999;
+var username = firstName + birthYear;
+console.log(`Username is: ${username}`);
+
+// Ques 9 :) Check whether a string starts with a specific letter.
+var str = "Hello World";
+console.log(str.startsWith("H")); // true
+
+// Ques 10 :) Count the total characters in a sentence excluding spaces.
+
+// You Need  :----      one string
+// one count variable
+// one loop
+
+// Then ------- :    check every character
+// if character is not " "
+//     increase count
+
+var str = "Hello World";
+var count = 0;
+
+for (var i = 0; i < str.length; i++) {
+  if (str[i] !== " ") {
+    count++;
+  }
+}
+console.log(`Total Characters is: ${count}`);
+
+// <------------------------------------ Logical Thinking Questions --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------  Logical Question ------------------------------------- ",
+);
+
+// Ques 1 :) Take two numbers and print which one is greater.
+var num1 = 10;
+var num2 = 20;
+if (num1 > num2) {
+  console.log(`${num1} is greater than ${num2}`);
+} else {
+  console.log(`${num2} is greater than ${num1}`);
+}
+
+// Ques 2 :) Check whether a number lies between 10 and 50.
+var num = 45;
+if (num >= 10 && num <= 50) {
+  console.log(`${num} is between 10 and 50`);
+} else {
+  console.log(`${num} is not between 10 and 50`);
+}
+
+// Ques 3 :) Check whether a password length is greater than 8.
+var password = "abc123";
+if (password.length > 8) {
+  console.log("Password is greater than 8");
+} else {
+  console.log("Password is not greater than 8");
+}
+
+// Ques 4 :) 4. Check if a person can drive:
+// - age > 18
+// - has license = true
+
+var age = 18;
+var hasLicense = true;
+if (age > 18 && hasLicense) {
+  console.log("Person can drive");
+} else {
+  console.log("Person can't drive");
+}
+
+// Ques 5 :) Check whether a number is divisible by 2, 3, or both.
+var num = 6;
+if (num % 2 === 0 && num % 3 === 0) {
+  console.log(`${num} is divisible by 2 and 3`);
+} else if (num % 2 === 0) {
+  console.log(`${num} is divisible by 2`);
+} else if (num % 3 === 0) {
+  console.log(`${num} is divisible by 3`);
+} else {
+  console.log(`${num} is not divisible by 2 and 3`);
+}
+
+// Ques 6 :) Print "Good Morning", "Good Afternoon", or "Good Evening" based on time
+const hour = 23;
+if (hour < 12) {
+  console.log("Good Morning");
+} else if (hour >= 12 && hour < 17) {
+  console.log("Good Afternoon");
+} else {
+  console.log("Good Evening");
+}
+
+// Ques 7 :) Find whether a number is a multiple of 10.
+var num = 50;
+if (num % 10 === 0) {
+  console.log(`${num} is a multiple of 10`);
+} else {
+  console.log(`${num} is not a multiple of 10`);
+}
+
+// Ques 8 :) Create a simple discount calculator
+var originalPrice = 1000;
+var discountPercentage = 10;
+
+var discountAmount = (originalPrice * discountPercentage) / 100;
+var discountedPrice = originalPrice - discountAmount;
+
+console.log(`Original Price: ${originalPrice}`);
+console.log(`Discount Amount: ${discountAmount}`);
+console.log(`Discounted Price: ${discountedPrice}`);
+
+// Ques 9 :) Check whether a product is in stock.  ( need one thing -> quantity)
+var quantity = 0;
+if (quantity > 0) {
+  console.log("Product is in stock");
+} else {
+  console.log("Product is out of stock");
+}
+
+// Ques 10 :) Calculate final bill after GST.
+var originalPrice = 1000;
+var gstPercentage = 18;
+
+var gstAmount = (originalPrice * gstPercentage) / 100;
+var finalPrice = originalPrice + gstAmount;
+
+console.log(`Original Price: ${originalPrice}`);
+console.log(`GST Amount: ${gstAmount}`);
+console.log(`Final Price: ${finalPrice}`);
+
+// <------------------------------------ Challenge Questions for Beginners --------------------------------------> ///////////////////////////////////
+
+console.log(
+  "------------------------------  Challenging Question ------------------------------------- ",
+);
