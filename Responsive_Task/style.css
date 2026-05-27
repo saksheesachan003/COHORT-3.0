@@ -219,13 +219,13 @@ nav .nav-part-2 {
 }
 
 #section-2 .section2-text h1 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 8vw, 5rem);
   font-weight: 300;
   width: 80%;
   text-align: center;
 }
 
-#section-2 > button {
+.best-sellers button {
   padding: 0.1rem 0.5rem;
   font-size: 3rem;
   font-weight: 600;
@@ -359,21 +359,47 @@ nav .nav-part-2 {
   font-size: 1rem;
 }
 
-@media (min-width: 768px){
-    #section-2 .card-container{
+.card-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.card-btn button {
+  padding: 0.8rem 3rem;
+  border-radius: 1.5rem;
+  font-family: figtree;
+  background-color: #2a2857;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+}
+
+.card-btn button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(69, 68, 68);
+}
+
+@media (min-width: 768px) {
+  #section-2 .card-container {
     flex-direction: row;
   }
 
-  .card{
+  .card {
     width: 50%;
   }
 
-  .card-top{
+  .card-top {
     height: 55vh;
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   nav {
     width: 100%;
     background-color: #fffefb;
@@ -448,15 +474,61 @@ nav .nav-part-2 {
     border-radius: 1.4rem;
   }
 
-  #section-2 .card-container{
+  #section-2 .section2-text h1 {
+    width: 50%;
+  }
+
+  #section-2 > button {
+    rotate: -2deg;
+    margin-left: 40rem;
+    border-radius: 1.2rem;
+  }
+
+  #section-2 .card-container {
     flex-direction: row;
   }
 
-  .card{
-    width: 25%;
+  .card {
+    width: 30%;
   }
 
-  .card-top{
+  .card-top {
     height: 55vh;
+  }
+
+  .card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem;
+  }
+
+  .best-sellers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .best-sellers button {
+    rotate: -2deg;
+  }
+
+  .card-btn button {
+    padding: 0.8rem 3rem;
+    border-radius: 1.5rem;
+    font-family: figtree;
+    background-color: #2a2857;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+  }
+
+  .card-btn button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(69, 68, 68);
   }
 }
