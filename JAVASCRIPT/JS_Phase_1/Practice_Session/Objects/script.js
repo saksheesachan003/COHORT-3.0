@@ -99,6 +99,8 @@ console.log(userArray);
 //////////////////////////////// Problem Solving Level ////////////////////////////
 
 // Ques 11 :) Find the student with highest marks.
+   // Login Idea : ) Take initial best value -> Loop -> Compare -> Update Best value
+
 const marks = {
   Anubhav: 95,
   Rahul: 82,
@@ -130,6 +132,79 @@ for (let salary in salaries) {
 console.log(sum);
 
 // Ques 13 :) ### Nested Object Access
-      // Print:
-          // - city
-          // - pincode
+// Print:
+// - city
+// - pincode
+const user2 = {
+  name: "Anubhav",
+  address: {
+    city: "Bhopal",
+    pincode: 462001,
+  },
+};
+console.log(user2.address.city);
+console.log(user2.address.pincode);
+
+// Ques 14 :) Object Method Practice
+const person1 = {
+  name: "ankit",
+  marks: 30,
+  getResult: () => {
+    if (person1.marks > 40) return "Pass";
+    else return "Fail";
+  },
+};
+console.log(person1.getResult());
+
+// Ques 15 :) Convert Array to Object
+  // Idea Behind :) Move by 2
+                  // Current index = key
+                  // Next index = value
+
+const arr = ["name", "Anubhav", "age", 24];
+let obj = {};
+for(let i = 0; i < arr.length; i+= 2){
+  obj[arr[i]] = arr[i + 1]
+}
+console.log("Convert Array To Object: ", obj);
+
+
+//////////////////////////////// Harder Practice Question ////////////////////////////
+
+// Ques 16 :) Frequency Counter ( Count frequency of each character )
+// Logic Idea : )  Create empty object
+                   // Loop
+                      // Character exists ?
+                          // YES → increase count
+                          // NO → create count = 1
+let str = "banana";
+let count = {};
+for(let char of str){
+  if(count[char]) count[char]++;
+  else count[char] = 1;
+}
+console.log("Frequency Counter: ", count);
+
+// Ques 17 :) Group By Property ( Group users by age )
+// Login Idea :) Create empty object
+                //  Loop
+                // Get age
+                // Age exists ?
+                    // YES: - add object to existing array
+                    // NO: - create new array and add object
+                // Repeat
+
+const users = [
+  { name: "A", age: 20 },
+  { name: "B", age: 21 },
+  { name: "C", age: 20 }
+]
+let groupedUsers = {};
+for (let user of users){
+  let age = user.age;
+  if(groupedUsers[age]) groupedUsers[age].push(user);
+  else groupedUsers[age] = [user];
+}
+console.log("Group By Property: ", groupedUsers);
+
+// Ques 18 :) Deep Property Check ( Check whether this property exists inside an object dynamically )
