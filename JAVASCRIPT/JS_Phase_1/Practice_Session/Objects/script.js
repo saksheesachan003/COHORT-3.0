@@ -99,7 +99,7 @@ console.log(userArray);
 //////////////////////////////// Problem Solving Level ////////////////////////////
 
 // Ques 11 :) Find the student with highest marks.
-   // Login Idea : ) Take initial best value -> Loop -> Compare -> Update Best value
+// Login Idea : ) Take initial best value -> Loop -> Compare -> Update Best value
 
 const marks = {
   Anubhav: 95,
@@ -157,30 +157,29 @@ const person1 = {
 console.log(person1.getResult());
 
 // Ques 15 :) Convert Array to Object
-  // Idea Behind :) Move by 2
-                  // Current index = key
-                  // Next index = value
+              // Idea Behind :) Move by 2
+              // Current index = key
+              // Next index = value
 
 const arr = ["name", "Anubhav", "age", 24];
 let obj = {};
-for(let i = 0; i < arr.length; i+= 2){
-  obj[arr[i]] = arr[i + 1]
+for (let i = 0; i < arr.length; i += 2) {
+  obj[arr[i]] = arr[i + 1];
 }
 console.log("Convert Array To Object: ", obj);
-
 
 //////////////////////////////// Harder Practice Question ////////////////////////////
 
 // Ques 16 :) Frequency Counter ( Count frequency of each character )
 // Logic Idea : )  Create empty object
-                   // Loop
-                      // Character exists ?
-                          // YES → increase count
-                          // NO → create count = 1
+                  // Loop
+                  // Character exists ?
+                  // YES → increase count
+                  // NO → create count = 1
 let str = "banana";
 let count = {};
-for(let char of str){
-  if(count[char]) count[char]++;
+for (let char of str) {
+  if (count[char]) count[char]++;
   else count[char] = 1;
 }
 console.log("Frequency Counter: ", count);
@@ -190,21 +189,99 @@ console.log("Frequency Counter: ", count);
                 //  Loop
                 // Get age
                 // Age exists ?
-                    // YES: - add object to existing array
-                    // NO: - create new array and add object
+                // YES: - add object to existing array
+                // NO: - create new array and add object
                 // Repeat
 
 const users = [
   { name: "A", age: 20 },
   { name: "B", age: 21 },
-  { name: "C", age: 20 }
-]
+  { name: "C", age: 20 },
+];
 let groupedUsers = {};
-for (let user of users){
+for (let user of users) {
   let age = user.age;
-  if(groupedUsers[age]) groupedUsers[age].push(user);
+  if (groupedUsers[age]) groupedUsers[age].push(user);
   else groupedUsers[age] = [user];
 }
 console.log("Group By Property: ", groupedUsers);
 
 // Ques 18 :) Deep Property Check ( Check whether this property exists inside an object dynamically )
+/// Logic Idea :)   Take property path
+                  // Split into pieces
+                  // Start from object
+                  // Loop through pieces
+                  // Property exists ?
+                  // YES → go deeper
+                  // NO → stop and return false
+                  // Finished loop ?
+                  // return true
+
+const obj3 = {
+  user: {
+    address: {
+      city: "Kanpur",
+      country: "India",
+    },
+  },
+};
+let path = "user.address.city";
+const properties = path.split(".");
+
+let currentObj = obj3;
+let exists = true;
+console.log(currentObj);
+for (let property of properties) {
+  if (currentObj[property]) {
+    currentObj = currentObj[property];
+  } else {
+    exists = false;
+    break;
+  }
+}
+console.log("Deep Property Check: ", exists, currentObj);
+
+// Ques 19 :) ### Object Comparison ( Check if two objects have same keys and values )
+// Logic Idea :)       Compare key count
+                      // Loop keys
+                      // Check key match
+                      // Check values match
+                      // If all pass → equal -> true
+
+const obj4 = { a: 1, b: 2 };
+const obj5 = { a: 1, b: 2 };
+let isEqual = true;
+
+if (Object.keys(obj4).length !== Object.keys(obj5).length) {
+  isEqual = false;
+} else {
+  for (let key of Object.keys(obj4)) {
+    if (obj4[key] !== obj5[key]) {
+      isEqual = false;
+      break;
+    }
+  }
+}
+console.log("Object Comparison: ", isEqual);
+
+// Ques 20 :) ### Remove Duplicate Objects ( Remove duplicate objects from array based on `id` )
+// Logic Idea :)      // Create empty result 
+                      // Loop objects
+                      // Create/check id
+                      // Already exists ?
+                      // YES → skip
+                      // NO → add to result
+                      // Return result
+
+const users1 = [
+  { id: 1, name: "A" },
+  { id: 2, name: "B" },
+  { id: 1, name: "A" },
+];
+let uniqueUsers = [];
+for (let user of users1) {
+  if (!uniqueUsers.some((u) => u.id === user.id)) {
+    uniqueUsers.push(user);
+  }
+}
+console.log("Remove Duplicate Objects: ", uniqueUsers);
