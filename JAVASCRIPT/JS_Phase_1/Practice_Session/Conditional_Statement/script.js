@@ -647,3 +647,117 @@ console.log(`Final Price: ${finalPrice}`);
 console.log(
   "------------------------------  Challenging Question ------------------------------------- ",
 );
+
+// Ques 1 :) Generate a random OTP of 4 digits.
+var otp = Math.floor(Math.random() * 9000) + 1000;
+console.log(`OTP is: ${otp}`);
+
+// Ques 2 : ) Reverse a 3-letter string manually
+var str = "cat";
+var rev = "";
+rev = str[2] + str[1] + str[0];
+
+// Using Loop Logic ------
+
+// for(var i = str.length -1; i >= 0; i--){
+//   rev += str[i];
+// }
+
+console.log(`Reverse String is: ${rev}`);
+
+// Ques 3 :) Find the last character of a string
+var str = "cat";
+console.log(`Last Character is: ${str[str.length - 1]}`);
+
+// Ques 4 :) Convert a full name into uppercase initials
+// Logic Idea :)       // Split name into words -> Loop
+// Take first character of each word
+// Convert to uppercase
+
+var fullName = "sakshee sachan";
+var initials = "";
+var words = fullName.split(" ");
+console.log(words);
+
+for (var i = 0; i < words.length; i++) {
+  initials += words[i][0].toUpperCase();
+}
+console.log(`Initials are: ${initials}`);
+
+// Ques 5 :) Check whether two strings are equal ignoring case sensitivity
+var str1 = "Hello";
+var str2 = "hello";
+if (str1.toLowerCase() === str2.toLowerCase()) {
+  console.log("Strings are equal");
+} else {
+  console.log("Strings are not equal");
+}
+
+// Ques 6 :) Create a simple login validation system
+var username = "admin";
+var password = "1234";
+var enteredUsername = "admin";
+var enteredPassword = "12";
+
+if (enteredUsername === username && enteredPassword === password) {
+  console.log("Login Successful");
+} else {
+  console.log("Login Failed");
+}
+
+// Ques 7 :) Find whether a number is a 2-digit or 3-digit number
+var num = 100;
+if (num >= 10 && num <= 99) {
+  console.log(`${num} is a 2-digit number`);
+} else if (num >= 100 && num <= 999) {
+  console.log(`${num} is a 3-digit number`);
+} else {
+  console.log(`${num} is not a 2-digit or 3-digit number`);
+}
+
+
+// Ques 8 :) Create a mini ATM balance checker
+var balance = 1000;
+var withdrawAmount = 500;
+var deposit = 1000;
+
+
+if (withdrawAmount <= balance) {
+  balance -= withdrawAmount;
+  console.log(`Withdrawal successful. New balance: ${balance}`);
+} else if(deposit){
+  balance += deposit;
+  console.log(`Deposit successful. New balance: ${balance}`);
+}else if(balance){
+  console.log(`Current balance: ${balance}`);
+}
+else {
+  console.log("Insufficient balance");
+}
+
+// Ques 9 :) Simulate a traffic light system using switch
+var lightColor = "red";
+
+switch (lightColor) {
+  case "red":
+    console.log("Stop");
+    break;
+  case "yellow":
+    console.log("Get Ready");
+    break;
+  case "green":
+    console.log("Go");
+    break;
+  default:
+    console.log("Invalid color");
+}
+
+// Ques 10 :) Build a small marksheet generator using variables and conditionals
+var sub1 = 80;
+var sub2 = 70;
+var sub3 = 60;
+var sub4 = 50;
+var sub5 = 70;
+var total_marks = (sub1 + sub2 + sub3 + sub4 + sub5);
+var percentage = (total_marks / 500) * 100;
+console.log(`Total Marks is: ${total_marks} and Percentage is: ${percentage}`);
