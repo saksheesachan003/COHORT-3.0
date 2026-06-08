@@ -6,6 +6,8 @@
 //// Created a Constructor Function (Pascal Case)
 // Defined default value
 
+console.log("---------------------- Function Constructor -------------");
+
 function CreateSongs() {
   this.songName = "Cry for me";
   this.albumName = "Hurry up tomorrow";
@@ -55,18 +57,14 @@ function MakeStudents(fname, lname, contact, isVerified) {
   this.lname = lname;
   this.contact = contact;
   this.isVerified = isVerified;
+  this.showProfile = function () {
+    if (this.isVerified) {
+      console.log(`Student Name: ${this.fname} ${this.lname}`);
+    } else {
+      console.log("User is not Verified");
+    }
+  };
 }
-
-let showProfile = function () {
-  if (this.isVerified) {
-    console.log(`Student Name: ${this.fname} ${this.lname}`);
-  } else {
-    console.log("User is not Verified");
-  }
-};
-
-// set "showProfile" function in prototype
-MakeStudents.prototype.showProfile = showProfile;
 
 // Created Instance
 let s1 = new MakeStudents("Ritika", "Chaurasiya", 1876943221, true);
@@ -81,6 +79,8 @@ s2.showProfile();
 ///// Before ES6, we uses the constructor func, now after ES6 we uses the classes
 
 /////////// <----------------------------------------- Classes (Syntactical Sugar ) -------------------------------------------------> ////////////////////////////////
+
+console.log("---------------------- Classes -------------");
 
 ///////////////// Example - 1 //////////////////////
 class MakeStudent {
@@ -110,4 +110,90 @@ console.log(student2);
 student1.showProfile();
 student2.showProfile();
 
-///////////////// Example - 2 //////////////////////
+/////////// <----------------------------------------- Classical Student -------------------------------------------------> ////////////////////////////////
+
+console.log("---------------------- Classical Inheritance -------------");
+
+class User {
+  constructor(fname, lname, contact) {
+    this.fname = fname;
+    this.lname = lname;
+    this.contact = contact;
+  }
+  greetUser() {
+    console.log(`Hello ${this.fname} ${this.lname}`);
+  }
+}
+
+let u1 = new User("Ayush", "Rane", 123456789);
+console.log(u1);
+u1.greetUser();
+
+class Admin extends User {
+  constructor(fname, lname, contact, isAdmin) {
+    super(fname, lname, contact); // super -> Call the parent class constructor
+    this.isAdmin = isAdmin;
+  }
+  addCourse() {
+    console.log("New Course Added");
+  }
+  removeAllCourses() {
+    console.log("all Courses Removed");
+  }
+}
+
+let u2 = new Admin("sumit", "mittal", 892318546, true);
+console.log(u2);
+u2.greetUser();
+
+/////////// <----------------------------------------- Prototypal Inheritance -------------------------------------------------> ////////////////////////////////
+
+console.log("---------------------- Protypal Inheritance -------------");
+
+/// prototype is object then we can assign prototype
+let papa = {
+  fname: "Amar",
+  lname: "Singh",
+  property: "50lakh",
+};
+
+let beta = {
+  fname: "Avneet",
+  lname: "Singh",
+};
+
+// Assigning the prototype of papa in beta
+beta.__proto__ = papa;
+
+console.log(beta);
+console.log(beta.property); // 50 lakh
+
+//////////////////// Example - 2 ////////////////////////////
+
+function MakeStudent2(fname, lname, contact, isVerified) {
+  this.fname = fname;
+  this.lname = lname;
+  this.contact = contact;
+  this.isVerified = isVerified;
+}
+
+let showProfile = function () {
+  if (this.isVerified) {
+    console.log(`Student Name: ${this.fname} ${this.lname}`);
+  } else {
+    console.log("User is not Verified");
+  }
+};
+
+// set "showProfile" function in prototype and available in all
+MakeStudent2.prototype.showProfile = showProfile;
+
+// Created Instance
+let st1 = new MakeStudent2("Ritika", "Chaurasiya", 1876943221, true);
+console.log(st1);
+
+let st2 = new MakeStudent2("kanika", "mittal", 893456123, false);
+console.log(st2);
+
+st1.showProfile();
+st2.showProfile();
