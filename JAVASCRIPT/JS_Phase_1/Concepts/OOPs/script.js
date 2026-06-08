@@ -1,4 +1,5 @@
 /////////// <----------------------------------------- Function Constructor -------------------------------------------------> ////////////////////////////////
+//// Creating Function Before ES6
 
 ///////////////// Example - 1 //////////////////////
 
@@ -54,14 +55,18 @@ function MakeStudents(fname, lname, contact, isVerified) {
   this.lname = lname;
   this.contact = contact;
   this.isVerified = isVerified;
-  this.showProfile = function () {
-    if (this.isVerified) {
-      console.log(`Student Name: ${this.fname} ${this.lname}`);
-    } else {
-      console.log("User is not Verified");
-    }
-  };
 }
+
+let showProfile = function () {
+  if (this.isVerified) {
+    console.log(`Student Name: ${this.fname} ${this.lname}`);
+  } else {
+    console.log("User is not Verified");
+  }
+};
+
+// set "showProfile" function in prototype
+MakeStudents.prototype.showProfile = showProfile;
 
 // Created Instance
 let s1 = new MakeStudents("Ritika", "Chaurasiya", 1876943221, true);
@@ -73,11 +78,36 @@ console.log(s2);
 s1.showProfile();
 s2.showProfile();
 
-
-
 ///// Before ES6, we uses the constructor func, now after ES6 we uses the classes
 
 /////////// <----------------------------------------- Classes (Syntactical Sugar ) -------------------------------------------------> ////////////////////////////////
 
+///////////////// Example - 1 //////////////////////
+class MakeStudent {
+  constructor(fname, lname, contact, isVerified) {
+    this.fname = fname;
+    this.lname = lname;
+    this.contact = contact;
+    this.isVerified = isVerified;
+  }
+  // made common func, not
+  showProfile = function () {
+    if (this.isVerified) {
+      console.log(`Student Name: ${this.fname} ${this.lname}`);
+    } else {
+      console.log("User is not Verified");
+    }
+  };
+}
 
+// Created Instance
+let student1 = new MakeStudent("Vertika", "Yadav", 1876943221, true);
+console.log(student1);
 
+let student2 = new MakeStudent("akshay", "mittal", 893456123, false);
+console.log(student2);
+
+student1.showProfile();
+student2.showProfile();
+
+///////////////// Example - 2 //////////////////////
