@@ -125,7 +125,7 @@ console.log("Highest Paid Employee: ", highestPaid);
 const greet = (name) => {
   console.log(`Hello ${name}`);
 };
-greet("Ritik");
+greet("Ritik"); // Hello Ritik
 
 /// Moderate :) Discount Calculator ( 10% discount )
 /// Concepts :) Function, parameters, Return
@@ -135,7 +135,7 @@ function calculateDiscount(price) {
   let discountedPrice = price - discount;
   return discountedPrice;
 }
-console.log(calculateDiscount(500));
+console.log("Discount Calculator:", calculateDiscount(500)); // 450
 
 /// Hard :) Dynamic Sum Function
 /// Concepts :) Function , Rest Parameter, Reduce
@@ -147,8 +147,84 @@ const sum = (...numbers) => {
   });
   return num;
 };
-console.log(sum(1, 2, 3, 4, 5));
-
+console.log("Dynamic Sum: ", sum(1, 2, 3, 4, 5)); // 15
 
 /////////////////////////////// <---------------------------------- Arrays + Objects + Functions Together -------------------------------------- > /////////////////////
+
+/// Easy :) Find Adult Users ( Return only users whose age is 18 or above. )
+/// Concepts :) Array of objects, filter(), Functions
+
+let letusers = [
+  { name: "Ritik", age: 20 },
+  { name: "Aman", age: 16 },
+  { name: "Priya", age: 25 },
+];
+
+const getAdults = (users) => {
+  return users.filter((user) => user.age >= 18);
+};
+console.log("Find Adult User:", getAdults(letusers));
+
+/// Moderate :) Shopping Cart Total ( Calculate Total Bill : price × quantity )
+/// Concepts :) Array of objects, Functions, reduce()
+
+const cart = [
+  { name: "Mouse", price: 500, qty: 2 },
+  { name: "Keyboard", price: 1000, qty: 1 },
+  { name: "Monitor", price: 10000, qty: 1 },
+];
+
+const getCartTotal = (cart) => {
+  return cart.reduce((acc, item) => {
+    let total = acc + item.price * item.qty;
+    return total;
+  }, 0);
+};
+console.log("Shopping Cart Total:", getCartTotal(cart));
+
+//// Hard :) Student Grade Report ( Calculate average -> Decide grade -> Create a new Object -> Return a new array)
+//// Concepts :) Array, Nested Arrays, Objects, Functions, map(), reduce(), conditional Logic
+
+let students = [
+  {
+    name: "Ritik",
+    marks: [80, 90, 85],
+  },
+  {
+    name: "Aman",
+    marks: [50, 40, 60],
+  },
+];
+
+const generateReport = (students) => {
+  return students.map((student) => {
+    let totalMarks = student.marks.reduce((acc, currentvalue) => {
+      let total = acc + currentvalue;
+      return total;
+    })
+    let avg = totalMarks / student.marks.length;
+    let grade;
+    if (avg >= 90) {
+      grade = "A";
+    } else if (avg >= 80) {
+      grade = "B";
+    } else if (avg >= 60) {
+      grade = "C";
+    } else {
+      grade = "D";
+    }
+    return{
+      name: student.name,
+      avg: avg,
+      grade: grade,
+    }
+  })
+}
+console.log("Student Grade Report:",  generateReport(students));
+
+
+
+/////////////////////////////// <---------------------------------- 🚀 Final Challenge (Very Hard) -------------------------------------- > /////////////////////
+////// <--------------------- Mini Library Management System ------------------------->
+
 
