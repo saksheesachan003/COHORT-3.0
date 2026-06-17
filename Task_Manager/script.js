@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
   let titleText = document.createTextNode(title);
   h3.appendChild(titleText);
 
-  // Create category
+  // Create category element
   let h5 = document.createElement("h5");
   h5.append(catg);
 
