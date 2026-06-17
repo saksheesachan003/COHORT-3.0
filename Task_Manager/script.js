@@ -23,8 +23,21 @@ form.addEventListener("submit", (e) => {
   let h5 = document.createElement("h5");
   h5.append(catg);
 
+  // Edit button
+  let editBtn = document.createElement("button");
+  editBtn.append("Edit");
+
+  // Delete button
+  let dltBtn = document.createElement("button");
+  dltBtn.append("Delete");
+
+  // Complete button
+  let completeBtn = document.createElement("button");
+  completeBtn.append("Complete");
+
   // Append to task div
-  task.append(h3, h5);
+  task.prepend(h3);
+  task.append(h5, editBtn, dltBtn, completeBtn);
 
   // Append task to task_card
   taskCard.appendChild(task);
