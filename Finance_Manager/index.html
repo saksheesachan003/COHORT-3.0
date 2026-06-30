@@ -18,12 +18,12 @@
         <svg viewBox="0 0 24 24"><path d="M3 12c2-4 6-6 9-6s7 2 9 6c-2 4-6 6-9 6s-7-2-9-6Z"/><circle cx="12" cy="12" r="2.4"/></svg>
       </div>
       <h1>FinTrack Pro</h1>
-      <p>Personal Ledger &middot; No. 0001</p>
+      <p>Personal Ledger</p>
     </div>
     <div class="passbook-body">
       <div class="field">
         <label for="login-name">Display Name</label>
-        <input id="login-name" type="text" placeholder="e.g. Asha Verma">
+        <input id="login-name" type="text" placeholder="e.g. Sakshee Sachan">
       </div>
       <div class="field">
         <label for="login-pass">Passcode</label>
@@ -32,7 +32,6 @@
       <button class="btn btn-primary" onclick="document.body.classList.add('show-app')">
         Open Ledger
       </button>
-      <p class="passbook-foot">First time here? <a href="#">It opens the same way</a></p>
     </div>
   </div>
 </div>
@@ -226,7 +225,7 @@
           </div>
         </div>
 
-        <div class="ledger-card settings-card" style="grid-column:1 / -1;">
+        <div class="ledger-card settings-card" id="session-card" style="grid-column:1 / -1;">
           <h3>Session</h3>
           <div class="toggle-row">
             <div>
@@ -252,7 +251,7 @@
     Add Transaction
   </button>
 
-  <footer class="app-foot">FinTrack Pro &middot; Entry No. 0031 &middot; Browser-Stored Ledger</footer>
+  <footer class="app-foot">FinTrack Pro Browser-Stored Ledger</footer>
 </div>
 
 <!-- ======================================== ADD TRANSACTION MODAL ============================================ -->
@@ -305,14 +304,7 @@
   </div>
 </div>
 
-<script>
-  function showPage(name, btn){
-    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
-    document.getElementById('section-' + name).classList.add('active');
-    document.querySelectorAll('.ledger-tabs button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>
