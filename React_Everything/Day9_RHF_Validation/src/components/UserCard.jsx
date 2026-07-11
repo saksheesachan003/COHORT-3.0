@@ -1,0 +1,30 @@
+import React from "react";
+
+const UserCard = ({ user, setToggle }) => {
+  return (
+    <div className="p-4 border border-black rounded flex flex-col gap-2 bg-gray-200">
+      <div className="h-50 w-40">
+        <img
+          className="object-cover h-full w-full rounded-xl"
+          src={user.image}
+          alt="No Image"
+        />
+      </div>
+      <div className="flex flex-col gap-1">
+        <h1>{user.name}</h1>
+        <p className="text-sm">{user.email}</p>
+        <p className="text-sm">{user.mobile}</p>
+      </div>
+      <div className="flex justify-between w-full gap-4">
+        <button onClick={() => setToggle((prev) => !prev)} className="bg-yellow-700 text-white py-2 px-3 rounded">
+          Update
+        </button>
+        <button className="bg-red-700 text-white py-2 px-3 rounded">
+          Delete
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default UserCard;
