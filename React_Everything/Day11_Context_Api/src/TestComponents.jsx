@@ -1,0 +1,29 @@
+import React, { useState } from "react";
+import Comp1 from "./components/Comp1";
+import Comp2 from "./components/Comp2";
+import Comp3 from "./components/Comp3";
+import Comp4 from "./components/Comp4";
+import NestedComp from "./components/NestedComp";
+
+const TestComponents = () => {
+  // const [data, setData] = useState("This is central data");
+  return (
+    <div>
+      <h1>All components</h1>
+
+      <Comp1 />
+
+      {/* This is prop drilling  */}
+      {/* <Comp1 data={data} > */}
+
+      {/* This is nested component -> children prop */}
+      {/* <Comp1 >
+        <NestedComp />
+      </Comp1> */}
+
+      
+    </div>
+  );
+};
+
+export default TestComponents;
