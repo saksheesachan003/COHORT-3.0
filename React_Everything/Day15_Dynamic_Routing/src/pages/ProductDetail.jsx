@@ -31,7 +31,7 @@ const ProductDetail = () => {
             <img
               src={singleProductData.image}
               alt={singleProductData.title}
-              className="h-[450px] object-contain transition duration-300 hover:scale-105"
+              className="h-[450] object-contain transition duration-300 hover:scale-105"
             />
           </div>
 
