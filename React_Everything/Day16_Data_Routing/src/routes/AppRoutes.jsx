@@ -3,8 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/Services";
-import MainLayout from "../layout/MainLayout";
-import AuthLAyout from "../layout/AuthLAyout";
+import MainLayout from "../layouts/MainLayout";
+import AuthLAyout from "../layouts/AuthLAyout";
 
 const AppRoutes = () => {
   let router = createBrowserRouter([
