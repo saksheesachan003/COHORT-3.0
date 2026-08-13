@@ -5,10 +5,12 @@ import { Auth } from "../context/AuthContext";
 const ProtectedRoute = () => {
   const { loggedInUser } = useContext(Auth);
 
+  // if loggedInUser value is null ( falsy ), then will run this block and navigate to login
   if (!loggedInUser) {
     return <Navigate to={"/"} />;
   }
 
+  // if loggedInValue is there then return outlet, navigate to main
   return <Outlet />;
 };
 
